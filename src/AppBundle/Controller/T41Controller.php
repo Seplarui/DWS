@@ -57,11 +57,21 @@ class T41Controller extends Controller
 		}
 		echo "</table>";
 		}
-		
-		
-		
-		
-
-
-	}
-
+		/**
+		 * @route("/hello/{lang}", name="lang")
+		 */
+		public function helloAction($lang) {
+			
+			switch ($lang) {
+				case "es":
+				return new Response('<html><body>El lenguaje es español ' .$lang.'</body></html');
+				break;
+				case "fr":
+				return new Response('<html><body>El lenguaje es francés ' .$lang.'</body></html');
+				case "en":
+				return new Response('<html><body>El lenguaje es inglés ' .$lang.'</body></html');
+				default:
+				return new Response('<html><body>Elija algún idioma</body></html>');
+			}
+		}
+}

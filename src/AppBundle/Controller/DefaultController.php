@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/hello/{name}", name="$name")
+     * @Route("/hello1/{name}", name="$name")
      */
     public function helloAction($name)
     {
