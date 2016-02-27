@@ -1,0 +1,6 @@
+numberAction:
+  path: /{number}
+  defaults: { _controller: AppBundle:T43:number }
+  methods: [GET]
+  #requirements:
+  #number: ^\+?\d{3}
