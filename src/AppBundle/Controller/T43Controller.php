@@ -11,7 +11,7 @@ Class T43Controller extends Controller {
 	
 	public function numberAction($number)
 	{
-		return new Response('<html><body>Hello '.$number=rand().'!</body></html>');
+		return new Response('<html><body>El número que hemos pasado ha sido!' .$number.'Y la URI utilizada es'.$_SERVER['REQUEST_URI'].'</body></html>');
 	
 	}
 	
