@@ -1,0 +1,65 @@
+{# app/Resources/views/base.html.twig #}
+
+{%  extends 'base.html.twig' %}
+{% block stylesheets %}
+<link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" type="text/css">
+
+{% endblock %}
+{% block title %} Practica 42 {% endblock %}
+{% block body %} 
+{% if pages=="T42" %}
+<ul>
+	<li><a href="http://localhost:8000/T42">T42</a></li>
+	<li><a href="http://localhost:8000/T42/about">About</a></li>
+	<li><a href="http://localhost:8000/T42/contact/">About</a></li>
+
+</ul>
+{% endif %}
+
+{% if pages=="about" %}
+<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</p>
+<ul>
+	<li><a href="http://localhost:8000/T42">T42</a></li>
+	<li><a href="http://localhost:8000/T42/about">About</a></li>
+	<li><a href="http://localhost:8000/T42/contact/">About</a></li>
+
+</ul>
+{% endif %}
+
+{%   if pages=="contact" %}
+<form>
+  <div class="row">
+    <div class="six columns">
+      <label for="exampleEmailInput">Your email</label>
+      <input class="u-full-width" placeholder="test@mailbox.com" id="exampleEmailInput" type="email">
+    </div>
+    <div class="six columns">
+      <label for="exampleRecipientInput">Reason for contacting</label>
+      <select class="u-full-width" id="exampleRecipientInput">
+        <option value="Option 1">Questions</option>
+        <option value="Option 2">Admiration</option>
+        <option value="Option 3">Can I get your number?</option>
+      </select>
+    </div>
+  </div>
+  <label for="exampleMessage">Message</label>
+  <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+  <label class="example-send-yourself-copy">
+    <input type="checkbox">
+    <span class="label-body">Send a copy to yourself</span>
+  </label>
+  <input class="button-primary" value="Submit" type="submit">
+</form>
+
+<ul>
+	<li><a href="http://localhost:8000/T42">T42</a></li>
+	<li><a href="http://localhost:8000/T42/about">About</a></li>
+	<li><a href="http://localhost:8000/T42/contact/">Contact</a></li>
+
+</ul>
+{% endif %}
+{% endblock %}
