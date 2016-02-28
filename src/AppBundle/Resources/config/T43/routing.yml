@@ -1,8 +1,27 @@
 numberAction:
-  path: /{number}
-  defaults: { _controller: AppBundle:T43:number }
+ path: /{number}
+ defaults: { _controller: AppBundle:T43:number }
+ methods: [GET]
+ requirements:
+  number: ^\+?\d{3}
+textAction:
+ path: /{text}
+ defaults: { _controller: AppBundle:T43:text }
+ methods: [GET]
+ requirements:
+  text: ([a-zA-Z]{3})
+defaultAction:
+  path: /page/{page}
+  defaults: { _controller: AppBundle:T43:default, page: 1}
   methods: [GET]
-  #requirements:
-  #number: ^\+?\d{3}
+  requirements:
+    page: \d+
+formatAction:
+ path: /alumnos/{year}.{_format}
+ defaults: { _controller: AppBundle:T43:format, _format: json }
+ methods: [GET]
+ requirements:
+  year: ^\+?\d{4}
+  _format: html|json
   
   
